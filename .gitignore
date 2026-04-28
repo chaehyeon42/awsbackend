@@ -1,0 +1,6 @@
+### 개인 설정 및 보안 ###
+.env
+bin/
+build/
+out/
+.gradle/
