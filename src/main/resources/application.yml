@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: aws-lab-backend
+  
+  cloud:
+    aws:
+      region:
+        static: us-east-1
+      stack:
+        auto: false
+      s3:
+        bucket: ${S3_BUCKET_NAME:awslab2026-bucket-test}
+
+# 추가 수정 부분: 컨트롤러에서 ${cloud.aws.s3.bucket}으로 직접 부를 때를 대비
+cloud:
+  aws:
+    region: us-east-1
+    s3:
+      bucket: ${S3_BUCKET_NAME:awslab2026-bucket-test}
